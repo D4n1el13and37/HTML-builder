@@ -46,6 +46,7 @@ async function buildStaticPage() {
   }
   //write the modified template to the index.html file 
   await fs.writeFile(indexHTMLPath, template, 'utf-8');
+  console.log('index.html created successfully');
 }
 
 
@@ -103,7 +104,6 @@ async function copyDir(srcDir, destDir) {
       await fs.copyFile(srcPath, destPath);
     }
   }
-  // console.log(`Directory was copied`);
 }
 
 const srcFolder = path.join(__dirname, 'assets');
